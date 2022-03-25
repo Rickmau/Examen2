@@ -36,4 +36,9 @@ public class Calculadora {
         this.segundoValor = segundoValor;
     }
 
+    public Calculadora(String marca, boolean esCientifica) {
+        this.marca = marca;
+        this.esCientifica = esCientifica;
+    }
+
 }
