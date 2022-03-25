@@ -4,6 +4,9 @@ public class Calculadora {
     double primerValor;
     double segundoValor;
 
+    public Calculadora() {
+    }
+
     public String getMarca() {
         return marca;
     }
@@ -41,4 +44,51 @@ public class Calculadora {
         this.esCientifica = esCientifica;
     }
 
+    public double suma(){
+        double suma = primerValor + segundoValor;
+        return suma;
+    }
+    public void showSuma(double suma){
+        System.out.println("Suma de " + primerValor + " + " + segundoValor + " = " + suma);
+    }
+
+    public double resta(){
+        double resta = primerValor - segundoValor;
+        return resta;
+    }
+    public void showResta(double resta){
+        System.out.println("Resta de " + primerValor + " - " + segundoValor + " = " + resta);
+    }
+
+    public double multiplicacion(){
+        double multiplicacion = primerValor * segundoValor;
+        return multiplicacion;
+    }
+    public void showMult(double multiplicacion){
+        System.out.println("Multiplicacion de " + primerValor + " * " + segundoValor + " = " + multiplicacion);
+    }
+
+    public double division() {
+        if (segundoValor == 0) {
+            return 0.0;
+        } else {
+            return primerValor / segundoValor;
+        }
+    }
+
+    public String elevarAPotencia() {
+        if (esCientifica == false) {
+            return "Su calculadora no es cientifica, no puede realizar esta operacion";
+        } else {
+            return  "" + Math.pow(primerValor, segundoValor);
+        }
+    }
+
+    public String toString(){
+        if(esCientifica == false){
+            return "La calculadora es de marca " + marca + " y no es cientifica";
+        } else {
+            return "La calculadora es de marca " + marca + " y si es cientifica";
+        }
+    }
 }
